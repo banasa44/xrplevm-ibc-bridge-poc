@@ -1,0 +1,27 @@
+# config.toml
+[global]
+log_level = "info"
+
+[mode]
+clients_enabled = true
+connections_enabled = true
+channels_enabled = true
+packets_enabled = true
+
+[[chains]]
+id = "cosmoshub-testnet"
+rpc_addr = "https://rpc.testnet.cosmoshub.io"    # Replace with the correct endpoint
+grpc_addr = "https://grpc.testnet.cosmoshub.io"    # Replace with the correct endpoint
+websocket_addr = "wss://rpc.testnet.cosmoshub.io/websocket"
+key_name = "mycosmoskey"
+chain_type = "cosmos"
+gas_multiplier = 1.2
+
+[[chains]]
+id = "xrpl-evm-devnet"
+rpc_addr = "https://rpc.xrplevm.devnet.io"         # Replace with the correct endpoint
+grpc_addr = "https://grpc.xrplevm.devnet.io"         # Replace with the correct endpoint
+websocket_addr = "wss://rpc.xrplevm.devnet.io/websocket"
+key_name = "myxrplkey"
+chain_type = "cosmos"
+gas_multiplier = 1.2
