@@ -1,0 +1,17 @@
+syntax = "proto3";
+package xrplevmbridgepoc.xrplevmbridgepoc;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "xrplevmbridgepoc/xrplevmbridgepoc/params.proto";
+
+option go_package = "xrplevm-bridge-poc/x/xrplevmbridgepoc/types";
+
+// GenesisState defines the xrplevmbridgepoc module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
